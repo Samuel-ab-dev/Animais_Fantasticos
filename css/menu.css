@@ -1,0 +1,92 @@
+.menu {
+  grid-column: 3 / span 2;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: var(--p2);
+}
+
+.menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.menu li a {
+  display: block;
+  padding: 10px;
+  margin-right: 10px;
+  color: var(--c1);
+  text-decoration: none;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.title {
+  font:
+    normal 6rem/1 "Playfair Display SC",
+    Georgia,
+    serif;
+  margin-bottom: 1rem;
+  grid-column: 1 / span 3;
+}
+
+.animals h2 {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  color: var(--p3);
+}
+
+.animals h2::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: var(--p2);
+}
+
+.animals p {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.animals_list {
+  height: 370px;
+  overflow-y: scroll;
+  grid-column: 2;
+}
+
+.animals_list::-webkit-scrollbar {
+  width: 18px;
+}
+
+.animals_list::-webkit-scrollbar-thumb {
+  background-color: var(--p2);
+  border-left: 4px solid var(--p2);
+  border-right: 4px solid var(--p2);
+}
+
+.animals_list::-webkit-scrollbar-track {
+  background: var(--p1);
+}
+
+.animals_desc section {
+  grid-column: 3;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 800px) {
+  .menu {
+    grid-column: 1;
+  }
+  .animals_list {
+    grid-column: 1;
+  }
+}

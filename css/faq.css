@@ -1,0 +1,38 @@
+.faq_list {
+  grid-column: 2 / span 2;
+}
+
+.faq_list dt {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--p3);
+}
+
+.faq_list dt::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: var(--p2);
+}
+
+.faq_list dd {
+  font-family: Helvetica, Arial, sans-serif;
+  margin-bottom: 0.5rem;
+  margin-left: 30px;
+}
+
+.copy {
+  grid-column: 3 / span 2;
+  margin-bottom: 2rem;
+  background-color: var(--p2);
+}
+
+.copy p {
+  padding: 20px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
+}
