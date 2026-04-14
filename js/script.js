@@ -1,0 +1,23 @@
+import scroll from "./modules/scroll.js";
+import initTabNav from "./modules/tabnav.js";
+import scrollAnime from "./modules/animetion.js";
+import innitAccord from "./modules/accordion.js";
+import innitModal from "./modules/modal.js";
+import tooltip from "./modules/tooltip.js";
+import innitDropDownMenu from "./modules/dropdownmenu.js";
+import innitMenuMobile from "./modules/mobilemenu.js";
+import innitWorkingHour from "./modules/workinghour.js";
+import innitFetchAnimals from "./modules/fetchanimals.js";
+import innitFetchBitcoin from "./modules/fetchbitcoin.js";
+
+innitAccord();
+scrollAnime();
+scroll();
+initTabNav();
+innitModal();
+tooltip();
+innitDropDownMenu();
+innitMenuMobile();
+innitWorkingHour();
+innitFetchAnimals();
+innitFetchBitcoin();

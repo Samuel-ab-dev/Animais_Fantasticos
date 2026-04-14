@@ -8,6 +8,7 @@
   margin-top: 2rem;
   margin-bottom: 0.5rem;
   color: var(--p3);
+  cursor: pointer;
 }
 
 .faq_list dt::before {
@@ -25,6 +26,31 @@
   margin-left: 30px;
 }
 
+.js [data-anime="accordion"] dd {
+  display: none;
+}
+
+[data-anime="accordion"] dt::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: url("../img/arrow-red.svg") no-repeat center center;
+  margin-left: 10px;
+  transform: rotate(90deg);
+  transition: transform 0.3s;
+}
+
+[data-anime="accordion"] dt.on::after {
+  content: "";
+  transform: rotate(-90deg);
+}
+
+[data-anime="accordion"] dd.on {
+  display: block;
+  animation: slideDown 0.5s forwards;
+}
+
 .copy {
   grid-column: 3 / span 2;
   margin-bottom: 2rem;
@@ -35,4 +61,20 @@
   padding: 20px;
   font-family: "IBM Plex Mono", monospace;
   font-weight: bold;
+}
+
+.btc_price {
+  background: var(--g);
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.tool_tip {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .tool_tip {
+    display: block;
+  }
 }

@@ -8,21 +8,34 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="preload" href="./css/style.css" as="style">
   <link rel="stylesheet" href="./css/style.css">
+  <script>document.documentElement.className += 'js';</script>
   <title>Animais Fantásticos</title>
 </head>
 
 <body>
-  <nav class="menu">
-    <ul>
-      <li><a href="#animais">Animais</a></li>
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#contato">Contato</a></li>
+  <nav class="menu" data-menu="soft">
+    <button data-menu="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <ul data-menu="list" id="menu">
+      <li><a href="#animals">Animais</a></li>
+      <li data-dropdown>
+        <a class="about" href="about.html">Sobre</a>
+        <ul class="dropdown_menu">
+          <li><a href="#.html">A Empresa</a></li>
+          <li><a href="#.html">Equipe</a></li>
+          <li><a href="#.html">Sócios</a></li>
+          <li><a href="#.html">Investidores</a></li>
+        </ul>
+      </li>
+      <li><a href="#faq">Faq</a></li>
+      <li><a href="#contact">Contato</a></li>
+      <li><a data-modal="on" href="login.html">Login</a></li>
     </ul>
   </nav>
-  <section class="grid_section animals" id="animais">
+  <section class="grid_section animals" data-anime="scroll" id="animals">
     <h1 class="title">Animais Fantásticos</h1>
-    <ul class="animals_list">
+    <ul class="animals_list" data-tab="menu">
       <li><img src="./img/imagem1.jpg" width="300" height="400" alt="Raposa"></li>
       <li><img src="./img/imagem2.jpg" width="300" height="400" alt="Esquilo"></li>
       <li><img src="./img/imagem3.jpg" width="300" height="400" alt="Urso"></li>
@@ -30,53 +43,55 @@
       <li><img src="./img/imagem5.jpg" width="300" height="400" alt="Babuíno"></li>
       <li><img src="./img/imagem6.jpg" width="300" height="400" alt="Leão"></li>
     </ul>
-    <div class="animals_desc">
-      <section>
-        <h2>Raposa</h2>
-        <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
-        <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
-        <p>De cerca de 40 espécies reconhecidas como raposas, somente 12 pertencem ao gênero Vulpes das "raposas verdadeiras", do qual a raposa vermelha é a mais comum.</p>
-        <p>As raposas vivem em todos os continentes, exceto a Antártida. De longe, a espécie mais comum e difundida de raposa é a raposa vermelha (Vulpes vulpes) com cerca de 47 subespécies reconhecidas.</p>
-      </section>
-      <section>
-        <h2>Esquilo</h2>
-        <p>Os esquilos pertencem a uma grande família de mamíferos roedores, de pequeno e médio porte, conhecida como Sciuridae.</p>
-        <p>Estão espalhados por quase todo o mundo, a maioria nas zonas de climas temperado ou tropical, mas também em algumas zonas de clima frio.</p>
-        <p>Como todos os roedores, possuem presas fortíssimas, com que roem facilmente sementes, principalmente bolotas.</p>
-        <p>As sementes são as principais fontes de alimentação, mas também consomem insetos e frutas. Quando coletam alimento, enterram algumas sementes que encontram.</p>
-      </section>
-      <section>
-        <h2>Urso</h2>
-        <p>Os Ursos constituem uma família de mamíferos carnívoros de grande porte, contendo os ursos e os pandas. Eles são classificados como caníformes ou carnivoros caninos.</p>
-        <p>As características comuns dos ursos modernos incluem corpos grandes com pernas atarracadas, focinhos longos, orelhas pequenas e arredondadas, cabelos desgrenhados, patas plantígradas com cinco garras não retráteis e caudas curtas.</p>
-        <p>Os ursos são animais tipicamente solitários e, exceto quando estão a procura de um parceiro para acasalar ou mães acompanhando seus filhotes, passam a vida toda sozinhos.</p>
-      </section>
-      <section>
-        <h2>Lobo</h2>
-        <p>Lobo é um animal carnívoro da família dos canídeos e que pertence ao gênero Canis.</p>
-        <p>Os lobos geralmente ostentam um porte maior em comparação às demais espécies de canídeos, além de possuírem ampla distribuição geográfica.</p>
-        <p>Os lobos são invariavelmente espécies que ostentam certas habilidades sociais, tendo um espécime/casal de espécimes reprodutor(es) como líder(es).</p>
-        <p>Segundo estudos, o Lobo é descendente do lobo-variável (Canis variabilis).</p>
-      </section>
-      <section>
-        <h2>Babuíno</h2>
-        <p>É um animal semi-quadrúpede da ordem dos primatas que mede até 120 centímetros de comprimento.</p>
-        <p>Ao contrário dos macacos, os babuínos passam a maior parte do tempo no chão. Suas caudas não são preênseis.</p>
-        <p>Os babuínos são grandes lutadores e demonstram pouco medo de outros animais, inclusive seres humanos.</p>
-        <p>Todos têm hierarquias fortes e complexas dentro dos grupos familiares.</p>
-      </section>
-      <section>
-        <h2>Leão</h2>
-        <p>O leão é uma espécie de mamífero carnívoro do gênero Panthera e da família Felidae.</p>
-        <p>A pelagem é unicolor de coloração castanha, e os machos apresentam uma juba característica. Uma das características mais marcantes da espécie é a presença de um tufo de pelos pretos na cauda, que também possui uma espora.</p>
-        <p>Habita preferencialmente as savanas e pastagens abertas, mas pode ser encontrado em regiões mais arbustivas.</p>
-        <p>É um animal sociável que vive em grupos que consiste das leoas e suas crias, o macho dominante e alguns machos jovens que ainda não alcançaram a maturidade sexual.</p>
-      </section>
-    </div>
+    <main>
+      <div class="animals_desc" data-tab="content">
+        <section data-anime="show-down">
+          <h2>Raposa</h2>
+          <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
+          <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
+          <p>De cerca de 40 espécies reconhecidas como raposas, somente 12 pertencem ao gênero Vulpes das "raposas verdadeiras", do qual a raposa vermelha é a mais comum.</p>
+          <p>As raposas vivem em todos os continentes, exceto a Antártida. De longe, a espécie mais comum e difundida de raposa é a raposa vermelha (Vulpes vulpes) com cerca de 47 subespécies reconhecidas.</p>
+        </section>
+        <section data-anime="show-right">
+          <h2>Esquilo</h2>
+          <p>Os esquilos pertencem a uma grande família de mamíferos roedores, de pequeno e médio porte, conhecida como Sciuridae.</p>
+          <p>Estão espalhados por quase todo o mundo, a maioria nas zonas de climas temperado ou tropical, mas também em algumas zonas de clima frio.</p>
+          <p>Como todos os roedores, possuem presas fortíssimas, com que roem facilmente sementes, principalmente bolotas.</p>
+          <p>As sementes são as principais fontes de alimentação, mas também consomem insetos e frutas. Quando coletam alimento, enterram algumas sementes que encontram.</p>
+        </section>
+        <section data-anime="show-down">
+          <h2>Urso</h2>
+          <p>Os Ursos constituem uma família de mamíferos carnívoros de grande porte, contendo os ursos e os pandas. Eles são classificados como caníformes ou carnivoros caninos.</p>
+          <p>As características comuns dos ursos modernos incluem corpos grandes com pernas atarracadas, focinhos longos, orelhas pequenas e arredondadas, cabelos desgrenhados, patas plantígradas com cinco garras não retráteis e caudas curtas.</p>
+          <p>Os ursos são animais tipicamente solitários e, exceto quando estão a procura de um parceiro para acasalar ou mães acompanhando seus filhotes, passam a vida toda sozinhos.</p>
+        </section>
+        <section data-anime="show-right">
+          <h2>Lobo</h2>
+          <p>Lobo é um animal carnívoro da família dos canídeos e que pertence ao gênero Canis.</p>
+          <p>Os lobos geralmente ostentam um porte maior em comparação às demais espécies de canídeos, além de possuírem ampla distribuição geográfica.</p>
+          <p>Os lobos são invariavelmente espécies que ostentam certas habilidades sociais, tendo um espécime/casal de espécimes reprodutor(es) como líder(es).</p>
+          <p>Segundo estudos, o Lobo é descendente do lobo-variável (Canis variabilis).</p>
+        </section>
+        <section data-anime="show-right">
+          <h2>Babuíno</h2>
+          <p>É um animal semi-quadrúpede da ordem dos primatas que mede até 120 centímetros de comprimento.</p>
+          <p>Ao contrário dos macacos, os babuínos passam a maior parte do tempo no chão. Suas caudas não são preênseis.</p>
+          <p>Os babuínos são grandes lutadores e demonstram pouco medo de outros animais, inclusive seres humanos.</p>
+          <p>Todos têm hierarquias fortes e complexas dentro dos grupos familiares.</p>
+        </section>
+        <section data-anime="show-down">
+          <h2>Leão</h2>
+          <p>O leão é uma espécie de mamífero carnívoro do gênero Panthera e da família Felidae.</p>
+          <p>A pelagem é unicolor de coloração castanha, e os machos apresentam uma juba característica. Uma das características mais marcantes da espécie é a presença de um tufo de pelos pretos na cauda, que também possui uma espora.</p>
+          <p>Habita preferencialmente as savanas e pastagens abertas, mas pode ser encontrado em regiões mais arbustivas.</p>
+          <p>É um animal sociável que vive em grupos que consiste das leoas e suas crias, o macho dominante e alguns machos jovens que ainda não alcançaram a maturidade sexual.</p>
+        </section>
+      </div>
+    </main>
   </section>
-  <section class="grid_section faq" id="sobre">
+  <section class="grid_section faq" data-anime="scroll" id="faq">
     <h1 class="title">FAQ</h1>
-    <dl class="faq_list">
+    <dl class="faq_list" data-anime="accordion">
       <dt>Qual é o intuíto do site?</dt>
       <dd>Apresentar informações objetivas sobre diversos tipos de animais tidos como exóticos.</dd>
       <dt>Por que são tidos como "fantásticos"?</dt>
@@ -87,25 +102,47 @@
       <dd>Proteger animais em extinção exige ações coletivas e individuais, focadas na preservação de habitats, combate ao tráfico e consumo sustentável.</dd>
     </dl>
   </section>
-  <section class="grid_section contact" id="contato">
+
+  <section class="grid_section numbers" data-anime="scroll">
+    <h1 class="title">Números</h1>
+    <div class="numbers_grid">
+    </div>
+  </section>
+
+  <section class="grid_section contact" data-anime="scroll" id="contact">
     <h1 class="title">Contato</h1>
-    <div class="map">
+    <div class="map" data-tooltip aria-label="Endereço próximo ao estacionamento.">
       <img src="./img/mapa.png" width="300" height="400" alt="Endereço de contato">
     </div>
     <ul class="data">
       <li><a href="mailto:samuelanselmo.dev@gmail.com">samuelanselmo.dev@gmail.com</a></li>
-      <li><a href="tel:+5585989736961">+55 (85) 98973-6961</a></li>
+      <li><a href="tel:+559999999999">+55 (99) 99999-9999</a></li>
       <li>
         <address>Rua ali, n° 99</address>
       </li>
       <li>Fortaleza, Ceará</li>
+      <li>Doe <span class="btc_price"></span> bitcoin para nos ajudar</li>
+      <li data-week="1,2,3,4,5" data-hours="8,18">Seg à Sex das 8 às 18</li>
+      <li class="tool_tip">Endereço próximo ao estacionamento</li>
     </ul>
   </section>
 
   <footer class="copy">
     <p>Todos os Direitos Reservados</p>
   </footer>
-  <script src="./java.js"></script>
+  <section class="modal_container" data-modal="container">
+    <div class="modal">
+      <button data-modal="close" class="close">X</button>
+      <form action="">
+        <label for="email">Email</label>
+        <input type="text" for="email" id="email">
+        <label for="password">Senha</label>
+        <input type="password" for="password" id="password">
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+  </section>
+  <script src="./main.js"></script>
 </body>
 
 </html>

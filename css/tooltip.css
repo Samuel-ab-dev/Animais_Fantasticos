@@ -1,0 +1,17 @@
+.js .tooltip {
+  position: absolute;
+  z-index: 500;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow:
+    0 0 0 2px var(--p2),
+    0 0 0 6px rgba(0, 0, 0, 0.6);
+  padding: 0.5rem;
+  color: var(--p1);
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
+  font-weight: 0.875rem;
+  max-width: 170px;
+  border-radius: 2px;
+  top: 0px;
+  left: 0px;
+}
