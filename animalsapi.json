@@ -1,26 +1,26 @@
 [
   {
-    "specie": "Raposa",
+    "specie": "Raposas",
     "total": 3859
   },
   {
-    "specie": "Esquilo",
+    "specie": "Esquilos",
     "total": 2485
   },
   {
-    "specie": "Urso",
-    "total": 5845
+    "specie": "Ursos",
+    "total": 2845
   },
   {
-    "specie": "Lobo",
-    "total": 8362
+    "specie": "Lobos",
+    "total": 3362
   },
   {
-    "specie": "Babuíno",
+    "specie": "Babuínos",
     "total": 2174
   },
   {
-    "specie": "Leão",
+    "specie": "Leões",
     "total": 2345
   }
 ]

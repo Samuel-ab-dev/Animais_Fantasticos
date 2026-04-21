@@ -61,6 +61,7 @@
   letter-spacing: 0.1em;
   margin-bottom: 1rem;
   color: var(--p3);
+  margin-left: 1rem;
 }
 
 .animals h2::before {
@@ -76,6 +77,7 @@
   font-family: Helvetica, Arial, sans-serif;
   line-height: 1.2;
   margin-bottom: 1rem;
+  margin-left: 1rem;
 }
 
 .animals_list {
@@ -90,7 +92,7 @@
 }
 
 .animals_list::-webkit-scrollbar-thumb {
-  background-color: var(--p2);
+  background: var(--p2);
   border-left: 4px solid var(--p2);
   border-right: 4px solid var(--p2);
 }
@@ -164,7 +166,7 @@
   transform: translate3d(0, 0, 0);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   .menu {
     grid-column: 1;
   }

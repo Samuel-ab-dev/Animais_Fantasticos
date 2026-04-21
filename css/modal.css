@@ -18,7 +18,9 @@
 .modal {
   background-color: var(--p1);
   padding: 40px;
-  min-width: 300px;
+  width: 80vw;
+  max-width: 600px;
+  box-sizing: border-box;
   border: 10px solid var(--p2);
   box-shadow: 0 0 0 10px var(--p1);
   position: relative;
@@ -69,6 +71,7 @@
   width: 100%;
   padding: 0.7rem 0.5rem;
   box-sizing: border-box;
+  border: 2px solid var(--c1);
 }
 
 .modal button[type="submit"] {
