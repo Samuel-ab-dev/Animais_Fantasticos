@@ -1,7 +1,7 @@
 export default class WorkingHour {
   constructor(working) {
     this.working = document.querySelector(working);
-    this.onClass = "on";
+    this.onClass = "open";
   }
 
   dataSetWorking() {
